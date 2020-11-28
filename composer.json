@@ -1,0 +1,17 @@
+{
+    "name": "vitopedro/chartjs",
+    "description": "wrapper for chartjs",
+    "authors": [
+        {
+            "name": "Pedro Vito",
+            "email": "pedrogilvito@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "vitopedro\\chartjs\\": "src/"
+        }
+    },
+    "require": {}
+}
