@@ -5,7 +5,7 @@
 <script>
     var ctx = document.getElementById('{{ $id }}');
     var myChart = new Chart(ctx, {
-        type: 'line',
+        type: '{{ $type }}',
         data: {
             labels: [
                 @foreach ($labels as $label)
@@ -27,7 +27,7 @@
                     backgroundColor: '{{ $colorPalette[$i]['backgroundColor'] }}',
                     borderColor: '{{ $colorPalette[$i]['borderColor'] }}',
                     borderWidth: 1,
-                    fill: false,
+                    fill: {{ $fill }},
                 },
                 @php
                     $i++;

@@ -50,7 +50,7 @@ class LineChart
         $this->title = $title;
     }
 
-    private function hasTitle()
+    protected function hasTitle()
     {
         return $this->title !== null && $this->title !== '';
     }
@@ -60,7 +60,7 @@ class LineChart
         $this->labels = $labels;
     }
 
-    private function getLabels()
+    protected function getLabels()
     {
         return $this->labels;
     }
@@ -103,6 +103,16 @@ class LineChart
         return $this->series;
     }
 
+    protected function getType()
+    {
+        return 'line';
+    }
+
+    protected function getFill()
+    {
+        return 'false';
+    }
+
     public function render() {
         return view('chartjs::line', [
             'id' => $this->id,
@@ -111,6 +121,8 @@ class LineChart
             'hasTitle' => $this->hasTitle(),
             'labels' => $this->getLabels(),
             'series' => $this->getSeries(),
+            'type' => $this->getType(),
+            'fill' => $this->getFill(),
         ]);
     }
 }
