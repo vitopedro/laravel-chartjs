@@ -1,6 +1,14 @@
 {
-    "name": "vitopedro/chartjs",
-    "description": "wrapper for chartjs",
+    "name": "vitopedro/laravel-chartjs",
+    "description": "chartjs wrapper for laravel",
+    "keywords": [
+        "laravel",
+        "laravel-framework",
+        "laravel-package",
+        "php",
+        "php7",
+        "chartjs"
+    ],
     "authors": [
         {
             "name": "Pedro Vito",
@@ -13,5 +21,9 @@
             "vitopedro\\chartjs\\": "src/"
         }
     },
-    "require": {}
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "laravel/framework": "^8.12"
+    }
 }
