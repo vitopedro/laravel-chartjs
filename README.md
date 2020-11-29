@@ -132,19 +132,21 @@ To create a pure pie chart only one serie should be used, if multiple series are
 ### Example
 
 ```
-$area = new AreaChart();
-$area->setTitle("this is a title");
-$area->setLabels(['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange']);
-$area->setSeries([
+use vitopedro\chartjs\PieChart;
+
+$pie = new PieChart();
+$pie->setTitle("this is a title");
+$pie->setLabels([
+    'Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange',
+]);
+$pie->setSeries([
     [
         'label' => 'data 1',
-        'data' => [12, 19, 3, 5, 2, 3],
-    ],
-    [
-        'label' => 'data 2',
-        'data' => [10, 15, 3, 5, 2, 3],
+        'data' => [
+            12, 19, 3, 5, 2, 3,
+        ],
     ],
 ]);
-echo $area->render();
+return $pie->render();
 ```
 ![alt Pie chart example](./src/preview/pie.png "Pie chart example")
