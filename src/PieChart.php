@@ -2,11 +2,11 @@
 
 namespace vitopedro\chartjs;
 
-class AreaChart extends BaseChart
+class PieChart extends BaseChart
 {
     public function render()
     {
-        return view('chartjs::area', [
+        return view('chartjs::pie', [
             'id' => $this->id,
             'colorPalette' => $this->colorPalette,
             'title' => $this->title,

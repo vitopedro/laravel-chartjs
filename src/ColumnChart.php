@@ -2,15 +2,17 @@
 
 namespace vitopedro\chartjs;
 
-class ColumnChart extends LineChart
+class ColumnChart extends BaseChart
 {
-    protected function getType()
+    public function render()
     {
-        return 'bar';
-    }
-
-    protected function getFill()
-    {
-        return 'false';
+        return view('chartjs::column', [
+            'id' => $this->id,
+            'colorPalette' => $this->colorPalette,
+            'title' => $this->title,
+            'hasTitle' => $this->hasTitle(),
+            'labels' => $this->getLabels(),
+            'series' => $this->getSeries(),
+        ]);
     }
 }

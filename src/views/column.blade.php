@@ -1,4 +1,4 @@
 @include('chartjs::chart', [
-    'type' => 'line',
+    'type' => 'bar',
     'fill' => 'false',
 ])
